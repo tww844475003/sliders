@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link href="css/jquery.slides.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+	<br><br>
+	<div class="slide_wrap">
+		<ul id="slides" class="slide">
+			<li style="background:url('images/01.jpg') no-repeat center top"><a href="#">pwstrick1</a></li>
+			<li style="background:url('images/02.jpg') no-repeat center top"><a href="#">pwstrick2</a></li>
+			<li style="background:url('images/03.jpg') no-repeat center top"><a href="#">pwstrick3</a></li>
+			<li style="background:url('images/04.jpg') no-repeat center top"><a href="#">pwstrick4</a></li>
+		</ul>
+	</div>
+	
+	<div style="clear: both; height: 50px;"></div>
+	<div class="slide_wrap">
+		<ul id="slides2" class="slide">
+			<li style="background:url('images/01.jpg') no-repeat center top"><a href="#">pwstrick1</a></li>
+			<li style="background:url('images/02.jpg') no-repeat center top"><a href="#">pwstrick2</a></li>
+			<li style="background:url('images/03.jpg') no-repeat center top"><a href="#">pwstrick3</a></li>
+			<li style="background:url('images/04.jpg') no-repeat center top"><a href="#">pwstrick4</a></li>
+		</ul>
+	</div>
+	
+	<div style="clear: both; height: 50px;"></div>
+	<div class="slide_wrap2">
+		<ul id="slides3" class="slide">
+			<li><img src="images/01.jpg" width="800" height="300"></li>
+			<li><img src="images/02.jpg" width="800" height="300"></li>
+			<li><img src="images/03.jpg" width="800" height="300"></li>
+			<li><img src="images/04.jpg" width="800" height="300"></li>
+		</ul>
+	</div>
+	
+	<script type="text/javascript" src="./seajs/sea.js"></script>
+	<script type="text/javascript">
+		seajs.config({
+			base: './seajs',
+			alias: {
+				'jquery': 'jquery.js',
+				'slides': 'jquery.slides.js'
+			}
+		});
+
+		seajs.use(['jquery','slides'],function($) {
+			$('#slides').slides({
+				speed: 6000,
+			});
+
+			$('#slides2').slides({
+				speed: 6000,
+			});
+
+			$('#slides3').slides({
+				speed: 6000,
+			});
+		});
+	</script>
+</body>
+</html>
